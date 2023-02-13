@@ -1,3 +1,8 @@
+using ConsomeBrasilApi.Interfaces;
+using ConsomeBrasilApi.Mapping;
+using ConsomeBrasilApi.Rest;
+using ConsomeBrasilApi.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<IFeriado, FeriadoService>();
+builder.Services.AddSingleton<IBrasilApi, BrasilApiRest>();
+
+builder.Services.AddAutoMapper(typeof(FeriadoMapping));
 
 var app = builder.Build();
 

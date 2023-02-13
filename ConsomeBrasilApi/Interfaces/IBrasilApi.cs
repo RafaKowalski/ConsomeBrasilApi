@@ -1,9 +1,10 @@
-﻿using ConsomeBrasilApi.Models;
+﻿using ConsomeBrasilApi.DTOs;
+using ConsomeBrasilApi.Models;
 
 namespace ConsomeBrasilApi.Interfaces
 {
     public interface IBrasilApi
     {
-        Task<ResponseGenerico<Feriado>> BuscaTodosFeriadosPorAno(string ano);
+        Task<ResponseGenerico<List<Feriado>>> BuscaTodosFeriadosPorAno(string ano);
     }
 }

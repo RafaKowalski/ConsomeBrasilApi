@@ -1,4 +1,5 @@
-﻿using ConsomeBrasilApi.Models;
+﻿using ConsomeBrasilApi.DTOs;
+using ConsomeBrasilApi.Models;
 
 namespace ConsomeBrasilApi.Interfaces
 {

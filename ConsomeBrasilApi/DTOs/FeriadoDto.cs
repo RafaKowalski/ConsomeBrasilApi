@@ -1,16 +1,13 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace ConsomeBrasilApi.Models
+namespace ConsomeBrasilApi.DTOs
 {
-    public class Feriado
+    public class FeriadoDto
     {
-        [JsonPropertyName("date")]
         public string? Data { get; set; }
 
-        [JsonPropertyName("name")]
         public string? Nome { get; set; }
 
-        [JsonPropertyName("type")]
         public string? Tipo { get; set; }
     }
 }

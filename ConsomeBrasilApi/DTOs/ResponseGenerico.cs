@@ -1,7 +1,7 @@
 ﻿using System.Dynamic;
 using System.Net;
 
-namespace ConsomeBrasilApi.Models
+namespace ConsomeBrasilApi.DTOs
 {
     public class ResponseGenerico<T> where T : class
     {

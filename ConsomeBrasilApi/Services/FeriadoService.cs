@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ConsomeBrasilApi.DTOs;
 using ConsomeBrasilApi.Interfaces;
 using ConsomeBrasilApi.Models;
 

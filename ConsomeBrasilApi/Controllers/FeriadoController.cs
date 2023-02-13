@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ConsomeBrasilApi.Controllers
 {
+    [Route("api/v1/[Controller]")]
+    [ApiController]
     public class FeriadoController : Controller
     {
         public readonly IFeriado _feriadoService;
