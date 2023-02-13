@@ -5,6 +5,6 @@ namespace ConsomeBrasilApi.Interfaces
 {
     public interface IFeriado
     {
-        Task<ResponseGenerico<List<Feriado>>> BuscaTodosFeriadosPorAno(string ano);
+        Task<ResponseGenerico<List<FeriadoDto>>> BuscaTodosFeriadosPorAno(string ano);
     }
 }

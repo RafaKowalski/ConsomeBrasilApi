@@ -16,11 +16,11 @@ namespace ConsomeBrasilApi.Services
             _mapper = mapper;
         }
 
-        public async Task<ResponseGenerico<List<Feriado>>> BuscaTodosFeriadosPorAno(string ano)
+        public async Task<ResponseGenerico<List<FeriadoDto>>> BuscaTodosFeriadosPorAno(string ano)
         {
             var feriados = await _brasilApi.BuscaTodosFeriadosPorAno(ano);
 
-            return _mapper.Map<ResponseGenerico<List<Feriado>>>(feriados);
+            return _mapper.Map<ResponseGenerico<List<FeriadoDto>>>(feriados);
         }
     }
 }
