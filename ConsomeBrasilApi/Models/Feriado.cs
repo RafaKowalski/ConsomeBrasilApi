@@ -2,15 +2,15 @@
 
 namespace ConsomeBrasilApi.Models
 {
-    public class Class
+    public class Feriado
     {
         [JsonPropertyName("date")]
-        public string Date { get; set; }
+        public string? Date { get; set; }
 
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [JsonPropertyName("type")]
-        public string Type { get; set; }
+        public string? Type { get; set; }
     }
 }
