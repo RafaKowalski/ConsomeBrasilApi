@@ -3,11 +3,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ConsomeBrasilApi.Controllers
 {
-    [Route("api/v1/[Controller]")]
+    [Route("[Controller]")]
     [ApiController]
     public class FeriadoController : Controller
     {
         public readonly IFeriado _feriadoService;
+
+        public FeriadoController(IFeriado feriadoService)
+        {
+            _feriadoService = feriadoService;
+        }
 
         [HttpGet("Busca/Feriados")]
         public async Task<IActionResult> BuscaTodosFeriadosPorAno(string ano)
