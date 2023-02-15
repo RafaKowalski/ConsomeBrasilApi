@@ -13,9 +13,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IFeriado, FeriadoService>();
+builder.Services.AddSingleton<IDiscagemDiretaDistancia, DiscagemDiretaDistanciaService>();
 builder.Services.AddSingleton<IBrasilApi, BrasilApiRest>();
 
 builder.Services.AddAutoMapper(typeof(FeriadoMapping));
+builder.Services.AddAutoMapper(typeof(DiscagemDiretaDistanciaMapping));
 
 var app = builder.Build();
 
