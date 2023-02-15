@@ -20,7 +20,7 @@ namespace ConsomeBrasilApi.Services
         {
             var discagemDiretaDistancia = await _brasilApi.BuscaDDDPorEstado(ddd);
 
-            return _mapper.Map<ResponseGenerico<DiscagemDiretaDistanciaDto>>(ddd);
+            return _mapper.Map<ResponseGenerico<DiscagemDiretaDistanciaDto>>(discagemDiretaDistancia);
         }
     }
 }

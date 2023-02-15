@@ -5,9 +5,9 @@ namespace ConsomeBrasilApi.Models
     public class DiscagemDiretaDistancia
     {
         [JsonPropertyName("state")]
-        public string? State { get; set; }
+        public string? Estado { get; set; }
 
         [JsonPropertyName("cities")]
-        public List<string>? Cities { get; set; }
+        public List<string>? Cidades { get; set; }
     }
 }
