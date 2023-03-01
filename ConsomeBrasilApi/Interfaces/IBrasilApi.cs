@@ -7,5 +7,6 @@ namespace ConsomeBrasilApi.Interfaces
     {
         Task<ResponseGenerico<List<Feriado>>> BuscaTodosFeriadosPorAno(string ano);
         Task<ResponseGenerico<DiscagemDiretaDistancia>> BuscaDDDPorEstado(string ddd);
+        Task<ResponseGenerico<Cep>> BuscaCep(string cep);
     }
 }
