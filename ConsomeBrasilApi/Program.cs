@@ -16,6 +16,8 @@ builder.Services.AddSingleton<IFeriado, FeriadoService>();
 builder.Services.AddSingleton<IDiscagemDiretaDistancia, DiscagemDiretaDistanciaService>();
 builder.Services.AddSingleton<ICep, CepService>();
 builder.Services.AddSingleton<IBrasilApi, BrasilApiRest>();
+builder.Services.AddSingleton<SaudacaoService, SaudacaoService>();
+
 
 builder.Services.AddAutoMapper(typeof(FeriadoMapping));
 builder.Services.AddAutoMapper(typeof(DiscagemDiretaDistanciaMapping));

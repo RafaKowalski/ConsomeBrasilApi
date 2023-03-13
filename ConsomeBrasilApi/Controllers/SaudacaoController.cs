@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ConsomeBrasilApi.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ConsomeBrasilApi.Controllers
 {
@@ -6,10 +7,17 @@ namespace ConsomeBrasilApi.Controllers
     [ApiController]
     public class SaudacaoController : Controller
     {
+        private readonly SaudacaoService _saudacapService;
+
+        public SaudacaoController(SaudacaoService saudacapService)
+        {
+            _saudacapService = saudacapService;
+        }
+
         [HttpGet]
         public IActionResult Saudacao(string nome)
         {
-            var mensagem = $"Ola {nome}, seja bem vindo ao projeto ConsomeBrasilApi \n" + DateTime.Now.ToString();
+            var mensagem = _saudacapService.Saudacao(nome);
 
             return Ok(mensagem);
         }
